@@ -1,4 +1,3 @@
-//Login.tsx
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
@@ -8,7 +7,7 @@ interface LoginProps {
 }
 
 const Login = ({setIsLoginSuccessful, onLoginError}: LoginProps) => {
-  const [respBonseData, setResponseData] = useState<string | null>(null);
+  const [responseData, setResponseData] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -39,8 +38,6 @@ const Login = ({setIsLoginSuccessful, onLoginError}: LoginProps) => {
           mode: '191',
           username: credentials.Username,
           password: credentials.Password,
-          a:'1708516607350',
-          producttype:'0',
         };
 
         const headers = {
@@ -48,7 +45,7 @@ const Login = ({setIsLoginSuccessful, onLoginError}: LoginProps) => {
           'Accept-Encoding': 'gzip, deflate',
           'Accept-Language': 'en-US,en',
           Connection: 'keep-alive',
-          'Content-Length': '81',
+      //  'Content-Length': '81',
           'Content-Type': 'application/x-www-form-urlencoded',
           Host: '10.0.0.2:8090',
            Origin: 'http://10.0.0.2:8090',
@@ -65,8 +62,7 @@ const Login = ({setIsLoginSuccessful, onLoginError}: LoginProps) => {
           body: new URLSearchParams(payload).toString(),
         });
         console.log('USED', credentials.Username, credentials.Password);
-        /*Imporvements:
-          Give timeout */
+        //Imporvements: Give timeout
 
         if (!responseLogin.ok) {
           throw new Error('Network response was not ok');
