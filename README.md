@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
@@ -81,3 +82,6 @@ To learn more about React Native, take a look at the following resources:
 =======
 # bruh-rn 
 >>>>>>> d2c5bb3f479f35a716199ac92e8f81929c8907b0
+=======
+# AutoAuth
+>>>>>>> bca20d07fb4e7ad13915afd2e80a3967fcd30f68
